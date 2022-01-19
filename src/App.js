@@ -17,7 +17,7 @@ function App() {
     setUserNumber(num);
   };
   const checkHandler = () => {
-    if (userNumber) {
+    if (userNumber && userNumber <= 20) {
       if (userNumber < randomNumber) {
         setIsCorrect(false);
         setScore((score) => score - 1);
@@ -34,7 +34,7 @@ function App() {
         }
       }
     } else {
-      alert("Please insert a value between 1 and 20!");
+      setMessage("Please insert a value between 1 and 20!");
     }
   };
   const resetHandler = () => {
