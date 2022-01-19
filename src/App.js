@@ -17,7 +17,7 @@ function App() {
     setUserNumber(num);
   };
   const checkHandler = () => {
-    if (userNumber && userNumber <= 20) {
+    if (userNumber && userNumber >= 1 && userNumber <= 20) {
       if (userNumber < randomNumber) {
         setIsCorrect(false);
         setScore((score) => score - 1);
